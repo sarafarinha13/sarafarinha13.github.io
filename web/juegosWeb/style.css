@@ -1,0 +1,278 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Bungee", sans-serif;
+}
+
+/* CREAR VARIABLES */
+:root{
+    --color-oscuro: #0E1428;
+    --color-morado: #8783D1;
+    --color-placeholder: #6c6a8d;
+
+}
+
+/* ----------- INDEX ---------- */
+#index{
+    background-color: var(--color-morado);
+}
+
+#nombre_usuario{
+  
+    border: var(--color-oscuro) dashed 3px;
+    border-radius: 20px;
+
+    margin: 3rem auto;
+    padding: 1.5rem;
+
+    gap: 1rem;
+
+    width: min(420px, 90vw);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#nombre_usuario input{
+    width: 100%;
+    max-width: 280px;
+
+    padding: 1rem;
+
+    background-color: var(--color-oscuro);
+    color: var(--color-morado);
+
+    border-radius: 20px;
+    text-align: center;
+}
+
+#nombre_usuario input:focus{
+    background-color: var(--color-oscuro);
+    outline: none;
+}
+
+#nombre_usuario ::placeholder{
+    color: var(--color-placeholder);
+}
+    
+
+#menu_juegos{
+    background-color: var(--color-oscuro);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    min-height: 30vh;
+    
+}
+
+.juegos{
+    
+    display: flex;
+    flex-direction: column;
+    width: clamp(220px, 28vw, 360px);
+    aspect-ratio: 1 / 1;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1,1rem;
+    gap: 10px;
+}
+
+.juegos h2{
+    color: var(--color-morado);
+    white-space: nowrap;
+    font-size: clamp(1rem, 2vw, 1.4rem);
+    
+}
+
+.juegos img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.juegos button{
+    background-color: none;
+    background: none;
+    border: none;
+}
+
+
+
+/* JUEGOS WEB */
+
+body {
+    background-color:var(--color-oscuro);
+
+}
+
+/* --------CABECERA--------- */
+.cabecera {
+    background-color:var(--color-morado);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 60px;
+    padding-bottom: 5px;
+    gap: 5px;
+}
+
+h1 {
+    /* hace que se adapte a la pantalla y no deje de estar en linea */
+    font-size: 5vw;
+    white-space: nowrap;
+
+    color: var(--color-oscuro);
+    text-align: center;
+
+
+}
+
+.botones_juego {
+    padding: 6px 20px;
+    margin-bottom: 20px;
+    min-width: 2rem;
+    cursor: pointer;
+    border-radius: 15px;
+    background: none;
+    border: 3px solid var(--color-oscuro);
+    color: var(--color-oscuro);
+}
+
+.botones_juego:hover {
+    background-color: var(--color-oscuro);
+    color: var(--color-morado);
+}
+
+/* --------JUEGOS--------- */
+
+/* ***************PIEDRA PAPEL TIJERA************* */
+
+.contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    flex-wrap: nowrap;
+    /*   background-color: green; */
+    padding-top: 25px;
+    padding-bottom: 30px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+/* Estilo que comparten los contenedores */
+.panel_juego{
+    width: min(350px, 40vw);
+    aspect-ratio: 1/1;
+    display: flex;
+}
+
+/* CUADRADO USUARIO */
+
+#contenedor_usuario {
+    flex-direction: column;
+}
+
+
+
+/* CUADRADO PC */
+
+#contenedor_pc {
+    align-items: center;
+    justify-content: center;
+}
+
+/* VS */
+.vs {
+    color: var(--color-oscuro);
+    font-size: clamp(2rem, 5vw, 4rem);
+    border: 2px solid;
+    background-color: var(--color-morado);
+    border-radius: 50%;
+    padding: 20px;
+}
+
+.boton_juego{
+    background: none;
+    border: none;
+}
+
+.img_juego {
+    width: min(160px, 25vw);
+    border-radius: 15px;
+    /*  background-color: blue; */
+    border: var(--color-morado) 2px dotted;
+}
+
+#contenedor_usuario .img_juego:hover {
+    background-color: var(--color-morado);
+}
+
+/* -------RESULTADO-------- */
+#contenedor_resultado{
+    background-color: transparent;
+    color: var(--color-morado);
+
+    width: 50vw; /* tamaño del cajon */
+    margin: 0 auto; /* para que se ponga en el medio */
+    padding: 10px;
+
+
+    border: var(--color-morado) solid 3px;
+    border-radius: 50px;
+
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.panel_resultado{
+/*     background-color: aquamarine; */
+    display: flex;
+    flex-direction: column;
+
+   
+    align-items: center;
+}
+
+
+/* *************** TRES EN RAYA ************* */
+
+#tablero{
+   /*  background-color: aqua; */
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+#tablero table{
+    border-collapse: collapse;
+    width: min(420px, 90vw);
+    aspect-ratio: 1 / 1;
+}
+
+.casilla{
+    width: 33.33%;
+    height: 33.33%;
+    border: 3px dashed var(--color-morado);
+
+
+    align-items: center;
+    vertical-align: middle;
+}
+
+.casilla img{
+    width: 70%;
+    height: 70%;
+    object-fit: contain;
+    display: block;
+    margin: auto;
+}

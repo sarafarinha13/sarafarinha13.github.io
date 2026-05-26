@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego - Piedra, papel, tijera</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=BJCree:wght@400;500;600;700&family=Bungee&family=Comic+Relief:wght@700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <!-- CABECERA -->
+    <div class="cabecera">
+        <h1>PIEDRA | PAPEL | TIJERA</h1>
+        <a href="index.html" id="salir_juego">
+            <button class="botones_juego">SALIR</button>
+        </a>
+    </div>
+
+    <div class="contenedor">
+        <!-- TURNO USUARIO  -->
+        <div class="panel_juego" id="contenedor_usuario">
+            <button class="boton_juego" id="piedra"><img class="img_juego" src="img/p.png"></button>
+            <button class="boton_juego" id="papel"><img class="img_juego" src="img/pa.png"></button>
+            <button class="boton_juego" id="tijera"><img class="img_juego" src="img/t.png"></button>
+
+        </div>
+
+        <span class="vs">VS</span>
+
+        <!-- TURNO PC -->
+        <div class="panel_juego" id="contenedor_pc"></div>
+        
+    </div>
+
+    <!-- RESULTADO DE CADA PARTIDA -->
+    <div id="contenedor_resultado">
+
+        <div class="panel_resultado">
+            <p id="nombre_jugador">NOMBRE</p>
+            <span id="puntos_jugador">0</span>
+        </div>
+
+        <div class="panel_resultado">
+            <p>EMPATE</p>
+            <span id="puntos_empate">0</span>
+        </div>
+
+        <div class="panel_resultado">
+            <p>PC</p>
+            <span id="puntos_pc">0</span>
+        </div>
+
+    </div>
+
+
+    <script src="script_ppt.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider Automático y Manual</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Importar tipografía desde google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Relief:wght@700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <h1>graphic design is my passion</h1>
+
+    <div class="slider-container">
+        <div class="slider">
+            <div class="slide"><img src="img/img1.png"></div>
+            <div class="slide"><img src="img/img2.png"></div>
+            <div class="slide"><img src="img/img3.png"></div>   
+            <div class="slide"><img src="img/img4.png"></div>
+            <div class="slide"><img src="img/img5.png"></div>
+            <div class="slide"><img src="img/img6.png"></div>
+            <div class="slide"><img src="img/img7.png"></div>
+        </div>
+
+        <div class="button">
+            <button onclick="prevSlide()">&#10094</button>
+            <button onclick="nextSlide()">&#10095</button>
+        </div>
+
+        <!-- Creo el contenedor en HTML y le añado los dots por JS por cada imagen que tenga -->
+        <div class="dots-container">
+            
+        </div>
+
+    </div>
+
+    <!-- Enlazamos el archivo javaScript -->
+     <script src="script.js"></script>
+
+</body>
+
+</html>

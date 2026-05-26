@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+        <meta charset="UTF-8">
+
+        <title>Proyectos Web</title>
+
+        <link rel="stylesheet" href="style.css">
+
+        <!-- Google Fonts -->
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Gasoek+One&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+            rel="stylesheet">
+
+</head>
+
+<body>
+    <header id="header-index">
+        <h1>PROYECTOS WEB</h1>
+        <img id="asterisco" src="img/asterisco.png" alt="Asterisco decorativo">
+    </header>
+
+    <div class="pagina-proyectos">
+        <div class="botones-proyectos">
+
+            <button class="boton-portfolio" onclick="cambiarProyecto('web/juegosWeb/index.html')">
+                Juegos Web
+            </button>
+
+            <button class="boton-portfolio" onclick="cambiarProyecto('web/twitterTheOffice/index.html')">
+                Twitter · The Office
+            </button>
+
+            <button class="boton-portfolio" onclick="cambiarProyecto('web/slideshowGraphicDesign/index.html')">
+                Galería Fotos
+            </button>
+
+        </div>
+
+        <iframe id="visor-web" src="web/juegosWeb/index.html">
+        </iframe>
+
+        <a href="index.html" class="boton-portfolio">
+            VOLVER AL HOME
+        </a>
+
+    </div>
+
+    <script>
+
+        function cambiarProyecto(web) {
+
+            document.querySelector("#visor-web").src = web;
+
+        }
+
+    </script>
+
+</body>
+
+</html>

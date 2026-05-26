@@ -1,0 +1,30 @@
+
+/** el * hace que afecte a todos los elementos de la página**/
+*
+{
+    /**Reseteamos los valores porque los navegadores suelen modificar**/
+    padding: 0;
+    margin: 0;
+    /**Sin el border-box el padding agranda la caja, con el, se mete dentro**/
+    box-sizing: border-box;
+}
+
+body{
+    display: flex; /**Convierte el contenedor en un flexbox, los elementos se organizan
+    automaticamente en línea y puedes controlarlos fácil**/
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    padding: 20 px;
+}
+
+
+.contenedor-carrusel{
+    width: 500px;
+    height: 300px;
+    background-color: blue;
+    box-shadow: 8px rgb(32, 32, 173);
+}
+
+.slider-section img{
+    width: 500px;
+}
