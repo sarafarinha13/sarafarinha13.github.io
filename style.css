@@ -308,3 +308,25 @@ footer:hover #footer-buttons{
     color:var(--main-color);
 
 }
+
+.boton-portfolio-2 {
+    background: transparent;
+    color: var(--main-color);
+    text-decoration: none;
+
+    padding: 0.7rem 1.6rem;
+    border-radius: 50px;
+    border: 2px solid var(--main-color);
+
+    font-family: var(--texto-font);
+    font-weight: 700;
+
+    transition: transform 0.3s ease;
+}
+
+.boton-portfolio-2:hover {
+    transform: scale(1.08);
+    background: #c8ff75;
+    color: var(--main-color);
+    border-color: #c8ff75;
+}
