@@ -29,15 +29,15 @@
     <div class="pagina-proyectos">
         <div class="botones-proyectos">
 
-            <button class="boton-portfolio" onclick="cambiarProyecto('./img/proyecto-java/marioParty.png')">
+            <button class="boton-portfolio" onclick="cambiarProyecto('img/proyecto-java/marioParty.png')">
                 Juegos Mario Party
             </button>
 
-            <button class="boton-portfolio" onclick="cambiarProyecto('./img/proyecto-java/Ahorcado.png')">
+            <button class="boton-portfolio" onclick="cambiarProyecto('img/proyecto-java/Ahorcado.png')">
                 Ahorcado
             </button>
 
-            <button class="boton-portfolio" onclick="cambiarProyecto('./img/proyecto-java/Calculadora.png')">
+            <button class="boton-portfolio" onclick="cambiarProyecto('img/proyecto-java/Calculadora.png')">
                 Calculadora
             </button>
 
@@ -54,15 +54,28 @@
 
     </div>
 
-    <script>
+<script>
 
-        function cambiarProyecto(web) {
+    function cambiarProyecto(web) {
+        document.querySelector("#visor-web").src = web;
+    }
 
-            document.querySelector("#visor-web").src = web;
+    window.addEventListener("DOMContentLoaded", () => {
+        //sirve para buscar despues del ? y lo transforma en algo que pueda leer el js
+        // URLSearchParams =  convierte lo de dentro en algo que sea localizado por .get()
+        const params = new URLSearchParams(window.location.search); 
+        const proyecto = params.get("proyecto");
 
+        if (proyecto === "ahorcado") {
+            cambiarProyecto("img/proyecto-java/Ahorcado.png");
+        } else if (proyecto === "marioparty") {
+            cambiarProyecto("img/proyecto-java/marioParty.png");
+        } else if (proyecto === "calculadora") {
+            cambiarProyecto("img/proyecto-java/Calculadora.png");
         }
+    });
 
-    </script>
+</script>
 
 </body>
 
